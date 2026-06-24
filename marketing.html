@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Marketing AI Prompts | PromptArea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600 tracking-tight">PromptArea</a>
+            <nav class="space-x-4 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-indigo-600">Home</a>
+                <a href="https://pinterest.com" target="_blank" class="hover:text-indigo-600">Pinterest</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-12">
+        <div class="mb-10">
+            <a href="index.html" class="text-sm text-indigo-600 hover:underline">← Back to Categories</a>
+            <h2 class="text-3xl font-extrabold text-gray-900 mt-2">💼 High-Performance Marketing Prompts</h2>
+            <p class="text-gray-600 mt-1">Stop using basic commands. Use these role-defined frameworks for high-converting marketing campaigns.</p>
+        </div>
+
+        <!-- PROMPT 1: BUYER PERSONA -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">Audience Research</span>
+                <span class="text-xs text-gray-400">Best for Claude & ChatGPT-4o</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">B2B Buyer Persona & Audience Psychology</h3>
+            <p class="text-sm text-gray-600 mb-4">Deeply analyze your target audience's core motivations, daily job frustrations, and psychological buying triggers instead of generic demographics.</p>
+            <div class="bg-gray-900 rounded-xl p-4 relative mb-4">
+                <pre class="text-gray-100 text-sm whitespace-pre-wrap font-mono overflow-x-auto pr-16" id="m-p1">Act as an audience research specialist with deep expertise in B2B SaaS buyer psychology. Your task is to create a detailed buyer persona profile. 
+Product/Service: [Describe your product here]
+Target Industry: [Industry vertical]
+Target Buyer: [Job title, e.g., CFO, Marketing Manager]
+
+Based on this, produce a structured matrix including: 
+1. Primary KPIs this person is measured on.
+2. Top 3 daily frustrations in their role.
+3. Buying triggers (what causes them to actively look for a solution).
+4. Common sales objections they raise during a demo.</pre>
+                <button onclick="copyPrompt('m-p1', this)" class="absolute top-3 right-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-all">Copy</button>
+            </div>
+            <p class="text-xs text-gray-500 italic">💡 <strong>Pro Tip:</strong> Fill out the variables in brackets `[...]` with real niche data to avoid jenerik responses.</p>
+        </div>
+
+        <!-- PROMPT 2: HOOK GENERATOR -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">Copywriting</span>
+                <span class="text-xs text-gray-400">Best for ChatGPT</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">High-Converting Social Media Hooks</h3>
+            <p class="text-sm text-gray-600 mb-4">Generate thumb-stopping scroll hooks for LinkedIn, Twitter, or TikTok based on proven psychological frameworks.</p>
+            <div class="bg-gray-900 rounded-xl p-4 relative mb-4">
+                <pre class="text-gray-100 text-sm whitespace-pre-wrap font-mono overflow-x-auto pr-16" id="m-p2">Act as an expert copywriter specializing in viral social media hooks. I will provide you with a core topic: "[Your Topic Here]". 
+Write 5 distinct hook options targeting different human psychological angles:
+1. The Curiosity Gap (Making them need to know the answer).
+2. The Contra-Narrative (Challenging a commonly accepted belief).
+3. The Data-Backed Proof (Starting with a shocking statistic).
+4. The Relatable Pain Point (Addressing an immediate frustration).
+5. The Time-Saving Frame (Promising quick value).</pre>
+                <button onclick="copyPrompt('m-p2', this)" class="absolute top-3 right-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-all">Copy</button>
+            </div>
+            <p class="text-xs text-gray-500 italic">💡 <strong>Pro Tip:</strong> Specify your target platform because LinkedIn requires a different tone than TikTok.</p>
+        </div>
+
+        <!-- PROMPT 3: CONTENT REPURPOSING -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">Content Strategy</span>
+                <span class="text-xs text-gray-400">Best for Claude 3.5 Sonnet</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Long-Form Article to Multi-Platform Scripts</h3>
+            <p class="text-sm text-gray-600 mb-4">Repurpose any long blog post or article into optimized, ready-to-publish social media content structures.</p>
+            <div class="bg-gray-900 rounded-xl p-4 relative mb-4">
+                <pre class="text-gray-100 text-sm whitespace-pre-wrap font-mono overflow-x-auto pr-16" id="m-p3">You are a social media strategist. Analyze the provided long-form content below and repurpose it into three specific assets:
+1. One value-dense LinkedIn post using short paragraphs and bullet points.
+2. One engaging 30-second video script for Instagram Reels/TikTok (include audio and visual cues).
+3. A breakdown of the top 3 key takeaways formatted for a Twitter/X thread.
+Do not use generic AI transition buzzwords. 
+[Insert Article Text Here]</pre>
+                <button onclick="copyPrompt('m-p3', this)" class="absolute top-3 right-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-all">Copy</button>
+            </div>
+        </div>
+
+        <!-- PROMPT 4: COMPETITOR AD ANALYSIS -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">Paid Ads</span>
+                <span class="text-xs text-gray-400">Best for Gemini 1.5 Pro</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Competitor Ad Copy Angle Deconstruction</h3>
+            <p class="text-sm text-gray-600 mb-4">Deconstruct your competitors' advertising angles to find gaps and write better ad variations.</p>
+            <div class="bg-gray-900 rounded-xl p-4 relative mb-4">
+                <pre class="text-gray-100 text-sm whitespace-pre-wrap font-mono overflow-x-auto pr-16" id="m-p4">Act as a direct-response advertising expert. Review this competitor ad copy: "[Paste Competitor Ad Here]".
+Analyze the following elements:
+1. What is the core emotional hook being utilized?
+2. What is the explicit or implicit promise being made?
+3. What is the primary objection they are trying to overcome?
+Now, write 2 alternative ad copy variations that target a completely different angle for the same product.</pre>
+                <button onclick="copyPrompt('m-p4', this)" class="absolute top-3 right-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-all">Copy</button>
+            </div>
+        </div>
+
+        <!-- PROMPT 5: EMAIL CAMPAIGN -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">Email Marketing</span>
+                <span class="text-xs text-gray-400">Best for ChatGPT / Claude</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">3-Part Welcome Sequence for Newsletters</h3>
+            <p class="text-sm text-gray-600 mb-4">Build an automated onboarding sequence that builds trust and drives immediate engagement from new subscribers.</p>
+            <div class="bg-gray-900 rounded-xl p-4 relative mb-4">
+                <pre class="text-gray-100 text-sm whitespace-pre-wrap font-mono overflow-x-auto pr-16" id="m-p5">Act as an expert email marketing strategist. Write a 3-part welcome email sequence for new newsletter subscribers.
+Newsletter Topic: [Insert Topic/Niche]
+Target Audience: [Describe Audience]
+
+- Email 1: Deliver immediate value, set expectations, and ask a question to boost reply rates.
+- Email 2: Tell a relatable origin story or share a major mistake you made and what you learned.
+- Email 3: Share a curated list of your top 3 resources or tools and introduce a soft pitch for your product.
+Keep the language natural, conversational, and completely free of hype-based buzzwords.</pre>
+                <button onclick="copyPrompt('m-p5', this)" class="absolute top-3 right-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-all">Copy</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-100 border-t border-gray-200 py-6 text-center text-sm text-gray-500 mt-12">
+        <p>&copy; 2026 PromptArea. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function copyPrompt(id, button) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerText;
+                button.innerText = "Copied! ✓";
+                button.classList.add('bg-green-600');
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.classList.remove('bg-green-600');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
