@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptArea | Advanced AI Prompt Directory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600 tracking-tight">PromptArea<span class="text-gray-500 text-sm font-normal">.net</span></h1>
+            <nav class="space-x-4 text-sm font-medium text-gray-600">
+                <a href="index.html" class="text-indigo-600">Home</a>
+                <a href="https://pinterest.com" target="_blank" class="hover:text-indigo-600">Pinterest</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-12">
+        <!-- Giriş Spotu -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Explore Professional AI Prompts</h2>
+            <p class="text-lg text-gray-600">Select a category to find curated, advanced prompts for your specific needs.</p>
+        </div>
+
+        <!-- ================= KATEGORİ ALANLARI BAŞLANGICI ================= -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            
+            <!-- 1. ALAN: BUSINESS & WORK -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <div class="text-xl mb-3">💼</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Business & Work</h3>
+                <div class="space-y-2 flex flex-col">
+                    <a href="marketing.html" class="text-sm text-indigo-600 hover:underline">→ Marketing Prompts</a>
+                    <a href="#" class="text-sm text-gray-500 hover:underline">→ SEO & Growth</a>
+                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Copywriting</a>
+                </div>
+            </div>
+
+            <!-- 2. ALAN: EDUCATION -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <div class="text-xl mb-3">🎓</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Education & Study</h3>
+                <div class="space-y-2 flex flex-col">
+                    <a href="coding.html" class="text-sm text-indigo-600 hover:underline">→ Coding & Development</a>
+                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Language Learning</a>
+                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Research Assistant</a>
+                </div>
+            </div>
+
+            <!-- 3. ALAN: PERSONAL & PRODUCTIVITY -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <div class="text-xl mb-3">🧘</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Productivity & Life</h3>
+                <div class="space-y-2 flex flex-col">
+                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Time Management</a>
+                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Daily Planners</a>
+                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Habit Trackers</a>
+                </div>
+            </div>
+
+        </div>
+        <!-- ================= KATEGORİ ALANLARI BİTİŞİ ================= -->
+
+
+        <!-- TRENDING PROMPTS (ANA SAYFADAKİ ÖRNEKLER) -->
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">🔥 Trending Prompts Today</h3>
+            
+            <!-- Örnek Kart -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">Marketing</span>
+                    <span class="text-xs text-gray-400">Optimized for ChatGPT-4o</span>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">B2B Buyer Persona & Audience Psychology</h4>
+                <p class="text-sm text-gray-600 mb-4">Create a highly detailed buyer persona profile to understand your target industry's frustrations.</p>
+                <div class="bg-gray-900 rounded-xl p-4 relative">
+                    <pre class="text-gray-100 text-sm whitespace-pre-wrap font-mono overflow-x-auto pr-16" id="prompt-1">Act as an audience research specialist... [Sample Prompt Text]</pre>
+                    <button onclick="copyPrompt('prompt-1', this)" class="absolute top-3 right-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-all">Copy</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-100 border-t border-gray-200 py-6 text-center text-sm text-gray-500 mt-12">
+        <p>&copy; 2026 PromptArea. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function copyPrompt(id, button) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerText;
+                button.innerText = "Copied! ✓";
+                button.classList.add('bg-green-600');
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.classList.remove('bg-green-600');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
