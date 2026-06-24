@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PromptArea | Advanced AI Prompt Directory</title>
+    <title>PromptArea | Premium AI Prompts Marketplace</title>
+    <meta name="description" content="Discover advanced, copy-paste ready AI prompts for ChatGPT, Claude, and Midjourney to automate your business and coding workflows.">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
     <!-- Header -->
-    <header class="bg-white shadow-sm border-b border-gray-100">
-        <div class="max-w-5xl mx-auto px-4 py-5 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-indigo-600 tracking-tight">PromptArea<span class="text-gray-500 text-sm font-normal">.net</span></h1>
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600 tracking-tight">PromptArea</a>
             <nav class="space-x-4 text-sm font-medium text-gray-600">
                 <a href="index.html" class="text-indigo-600">Home</a>
                 <a href="https://pinterest.com" target="_blank" class="hover:text-indigo-600">Pinterest</a>
@@ -19,91 +20,189 @@
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-12">
-        <!-- Giriş Spotu -->
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Explore Professional AI Prompts</h2>
-            <p class="text-lg text-gray-600">Select a category to find curated, advanced prompts for your specific needs.</p>
+    <!-- Hero Section & Dynamic Search Engine -->
+    <section class="max-w-4xl mx-auto px-4 pt-16 pb-12 text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight">
+            Curated <span class="text-indigo-600">Advanced AI Prompts</span> <br class="hidden sm:inline">for Elite Professionals.
+        </h1>
+        <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+            Stop guessing what to type. Copy-paste battle-tested AI frameworks for marketing, development, and system design.
+        </p>
+
+        <!-- Dynamic Search Box -->
+        <div class="mt-8 max-w-xl mx-auto relative">
+            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+            </div>
+            <input type="text" id="searchInput" oninput="searchPrompts()" placeholder="Search prompts by keyword (e.g., persona, code, sql)..." 
+                   class="w-full pl-11 pr-4 py-3.5 bg-white border border-gray-200 rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm transition-all">
         </div>
 
-        <!-- ================= KATEGORİ ALANLARI BAŞLANGICI ================= -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            
-            <!-- 1. ALAN: BUSINESS & WORK -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                <div class="text-xl mb-3">💼</div>
-                <h3 class="text-lg font-bold text-gray-900 mb-3">Business & Work</h3>
-                <div class="space-y-2 flex flex-col">
-                    <a href="marketing.html" class="text-sm text-indigo-600 hover:underline">→ Marketing Prompts</a>
-                    <a href="#" class="text-sm text-gray-500 hover:underline">→ SEO & Growth</a>
-                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Copywriting</a>
-                </div>
-            </div>
-
-            <!-- 2. ALAN: EDUCATION -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                <div class="text-xl mb-3">🎓</div>
-                <h3 class="text-lg font-bold text-gray-900 mb-3">Education & Study</h3>
-                <div class="space-y-2 flex flex-col">
-                    <a href="coding.html" class="text-sm text-indigo-600 hover:underline">→ Coding & Development</a>
-                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Language Learning</a>
-                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Research Assistant</a>
-                </div>
-            </div>
-
-            <!-- 3. ALAN: PERSONAL & PRODUCTIVITY -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                <div class="text-xl mb-3">🧘</div>
-                <h3 class="text-lg font-bold text-gray-900 mb-3">Productivity & Life</h3>
-                <div class="space-y-2 flex flex-col">
-                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Time Management</a>
-                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Daily Planners</a>
-                    <a href="#" class="text-sm text-gray-500 hover:underline">→ Habit Trackers</a>
-                </div>
-            </div>
-
+        <!-- Filter Buttons (Filtreleme Altyapısı) -->
+        <div class="mt-4 flex flex-wrap justify-center gap-2">
+            <button onclick="filterType('all')" id="btn-all" class="px-4 py-1.5 bg-indigo-600 text-white text-xs font-semibold rounded-full shadow-sm transition-all">All Prompts</button>
+            <button onclick="filterType('popular')" id="btn-popular" class="px-4 py-1.5 bg-white text-gray-600 border border-gray-200 text-xs font-semibold rounded-full hover:bg-gray-50 transition-all">🔥 Most Popular</button>
+            <button onclick="filterType('new')" id="btn-new" class="px-4 py-1.5 bg-white text-gray-600 border border-gray-200 text-xs font-semibold rounded-full hover:bg-gray-50 transition-all">✨ Newest</button>
         </div>
-        <!-- ================= KATEGORİ ALANLARI BİTİŞİ ================= -->
+    </section>
 
+    <!-- Core Grid Area (Arama Sonuçlarının Canlı Listeleyeceği Yer) -->
+    <main class="max-w-5xl mx-auto px-4 pb-24">
+        
+        <!-- Search Status / No Results Container -->
+        <div id="noResults" class="hidden text-center py-12 text-gray-500 text-sm font-medium">
+            No prompts found matching your keywords. Try searching for something else!
+        </div>
 
-        <!-- TRENDING PROMPTS (ANA SAYFADAKİ ÖRNEKLER) -->
-        <div class="max-w-3xl mx-auto">
-            <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">🔥 Trending Prompts Today</h3>
-            
-            <!-- Örnek Kart -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full">Marketing</span>
-                    <span class="text-xs text-gray-400">Optimized for ChatGPT-4o</span>
-                </div>
-                <h4 class="text-lg font-bold text-gray-900 mb-2">B2B Buyer Persona & Audience Psychology</h4>
-                <p class="text-sm text-gray-600 mb-4">Create a highly detailed buyer persona profile to understand your target industry's frustrations.</p>
-                <div class="bg-gray-900 rounded-xl p-4 relative">
-                    <pre class="text-gray-100 text-sm whitespace-pre-wrap font-mono overflow-x-auto pr-16" id="prompt-1">Act as an audience research specialist... [Sample Prompt Text]</pre>
-                    <button onclick="copyPrompt('prompt-1', this)" class="absolute top-3 right-3 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-all">Copy</button>
+        <!-- DYNAMIC PROMPTS CONTAINER -->
+        <div id="promptsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- JavaScript buranın içini otomatik, saniyede dolduracak! -->
+        </div>
+
+        <hr class="my-16 border-gray-200">
+
+        <!-- Static Categories Links (For SEO Structure) -->
+        <div>
+            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Browse Categories Directly</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="marketing.html" class="p-4 bg-white border border-gray-200 rounded-xl hover:border-indigo-500 transition-all shadow-xs block">
+                    <span class="text-sm font-bold text-gray-900 block">📢 Digital Marketing</span>
+                    <span class="text-xs text-gray-500">Personas, copywriting, hooks.</span>
+                </a>
+                <a href="coding.html" class="p-4 bg-white border border-gray-200 rounded-xl hover:border-indigo-500 transition-all shadow-xs block">
+                    <span class="text-sm font-bold text-gray-900 block">💻 Coding & Development</span>
+                    <span class="text-xs text-gray-500">Refactoring, SQL, Regex, APIs.</span>
+                </a>
+                <div class="p-4 bg-gray-100 border border-gray-200 rounded-xl opacity-60 block cursor-not-allowed">
+                    <span class="text-sm font-bold text-gray-400 block">🎓 Education & Study</span>
+                    <span class="text-xs text-gray-400">Coming soon...</span>
                 </div>
             </div>
         </div>
-
     </main>
 
-    <footer class="bg-gray-100 border-t border-gray-200 py-6 text-center text-sm text-gray-500 mt-12">
+    <footer class="bg-gray-100 border-t border-gray-200 py-6 text-center text-sm text-gray-500">
         <p>&copy; 2026 PromptArea. All rights reserved.</p>
     </footer>
 
+    <!-- 🧠 AKILLI MERKEZİ ARAMA MOTORU KODU (JAVASCRIPT) -->
     <script>
-        function copyPrompt(id, button) {
-            const text = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                const originalText = button.innerText;
-                button.innerText = "Copied! ✓";
-                button.classList.add('bg-green-600');
-                setTimeout(() => {
-                    button.innerText = originalText;
-                    button.classList.remove('bg-green-600');
-                }, 2000);
+        // Bütün prompt verilerimizin toplandığı havuz. Yeni prompt ekledikçe sadece buraya ekleme yapacaksın!
+        const promptDatabase = [
+            {
+                id: "p1",
+                title: "B2B Buyer Persona & Audience Psychology",
+                desc: "Extract deep psychological insights, pain points, and objections of your business buyers.",
+                category: "Marketing",
+                link: "b2b-persona.html",
+                tags: ["marketing", "persona", "strategy", "audience", "psychology"],
+                isPopular: true,
+                isNew: false
+            },
+            {
+                id: "p2",
+                title: "Senior Developer Code Review & Refactoring",
+                desc: "Transform messy, amateur code into clean, modular, and optimized production-ready blocks.",
+                category: "Coding",
+                link: "coding.html",
+                tags: ["code", "refactor", "clean code", "python", "javascript", "developer"],
+                isPopular: true,
+                isNew: true
+            },
+            {
+                id: "p3",
+                title: "The Ultimate Bug Hunter & Explainer",
+                desc: "Locate code crashes, get root cause explanations in plain English, and permanent logic fixes.",
+                category: "Coding",
+                link: "coding.html",
+                tags: ["bug", "error", "debug", "crash", "fix"],
+                isPopular: false,
+                isNew: true
+            }
+        ];
+
+        let currentFilter = 'all';
+
+        // Promptları ekrana dinamik basan fonksiyon
+        function renderPrompts(data) {
+            const grid = document.getElementById('promptsGrid');
+            const noResults = document.getElementById('noResults');
+            grid.innerHTML = '';
+
+            if (data.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            data.forEach(item => {
+                const card = `
+                    <div class="bg-white rounded-2xl shadow-xs border border-gray-200 p-6 flex flex-col justify-between hover:shadow-md transition-all">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">${item.category}</span>
+                                <div class="flex gap-1">
+                                    ${item.isPopular ? '<span class="bg-amber-50 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-md">🔥 Popular</span>' : ''}
+                                    ${item.isNew ? '<span class="bg-green-50 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-md">✨ New</span>' : ''}
+                                </div>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">${item.title}</h3>
+                            <p class="text-sm text-gray-600 mb-4">${item.desc}</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-50 flex justify-between items-center">
+                            <a href="${item.link}" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800 hover:underline inline-flex items-center gap-1">
+                                Get Prompt 
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
             });
         }
+
+        // Anlık Arama Yapma Motoru
+        function searchPrompts() {
+            const keyword = document.getElementById('searchInput').value.toLowerCase();
+            
+            let filtered = promptDatabase.filter(item => {
+                const matchesTitle = item.title.toLowerCase().includes(keyword);
+                const matchesDesc = item.desc.toLowerCase().includes(keyword);
+                const matchesTags = item.tags.some(tag => tag.includes(keyword));
+                return matchesTitle || matchesDesc || matchesTags;
+            });
+
+            // Eğer filtre seçildiyse aramayı filtreye göre de daralt
+            if (currentFilter === 'popular') {
+                filtered = filtered.filter(item => item.isPopular);
+            } else if (currentFilter === 'new') {
+                filtered = filtered.filter(item => item.isNew);
+            }
+
+            renderPrompts(filtered);
+        }
+
+        // Buton Filtrelerini Yönetme
+        function filterType(type) {
+            currentFilter = type;
+            
+            // Buton renklerini sıfırla
+            const buttons = ['all', 'popular', 'new'];
+            buttons.forEach(b => {
+                const btn = document.getElementById(`btn-${b}`);
+                btn.className = "px-4 py-1.5 border text-xs font-semibold rounded-full transition-all " + 
+                                (b === type ? "bg-indigo-600 text-white border-transparent shadow-sm" : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50");
+            });
+
+            // Arama fonksiyonunu tetikle (böylece arama kutusundaki kelimeyle filtre çakışmaz)
+            searchPrompts();
+        }
+
+        // Site ilk açıldığında tüm promptları listele
+        renderPrompts(promptDatabase);
     </script>
 </body>
 </html>
